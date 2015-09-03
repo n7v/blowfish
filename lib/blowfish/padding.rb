@@ -10,10 +10,10 @@ module Blowfish
         fail UnknownPaddingModeError, 'Invalid padding mode'
       end
 
-      l = 8 - (s.bytes.size % 8)
+      l = 8 - (s.bytes.count % 8)
       case mode
       when :none
-        if s.bytes.size % 8 != 0
+        if s.bytes.count % 8 != 0
           fail InvalidDataSizeError, 'Data size should be divisible by 8'
         end
       when :ansi_x923
@@ -26,7 +26,7 @@ module Blowfish
 
     def self.unpad(s, mode = nil)
       mode ||= :ansi_x923
-      sz = s.bytes.size
+      sz = s.bytes.count
 
       unless MODES.include?(mode)
         fail UnknownPaddingModeError, 'Invalid padding mode'
@@ -36,7 +36,8 @@ module Blowfish
 
       case mode
       when :ansi_x923
-        s = s.byteslice(0, sz - s.bytes.last)
+        last = s[-1].bytes.to_a[-1]
+        s = s.byteslice(0, sz - last)
       when :spaces
         s = s.byteslice(0, sz - 8) + s.byteslice(sz - 8, 8).rstrip
       end

@@ -7,7 +7,7 @@ RSpec.describe Blowfish::Padding do
 
     it 'should return padded data of correct size' do
       s = Blowfish::Padding.pad('abcde')
-      expect(s.bytes.size).to eq(8)
+      expect(s.bytes.count).to eq(8)
     end
 
     context 'when invalid padding mode' do
