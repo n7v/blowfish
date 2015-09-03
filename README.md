@@ -1,9 +1,9 @@
 # Blowfish
-[![Build Status](https://travis-ci.org/n7v/blowfish.png)](https://travis-ci.org/n7v/blowfish)
-[![Gem Version](https://badge.fury.io/rb/blowfish.png)](http://badge.fury.io/rb/blowfish)
-[![Coverage Status](https://coveralls.io/repos/n7v/blowfish/badge.png)](https://coveralls.io/r/n7v/blowfish)
-[![Code Climate](https://codeclimate.com/github/n7v/blowfish.png)](https://codeclimate.com/github/n7v/blowfish)
-[![Dependency Status](https://gemnasium.com/n7v/blowfish.png)](https://gemnasium.com/n7v/blowfish)
+[![Build Status](https://travis-ci.org/n7v/blowfish.svg?branch=master)](https://travis-ci.org/n7v/blowfish)
+[![Gem Version](https://badge.fury.io/rb/blowfish.svg)](http://badge.fury.io/rb/blowfish)
+[![Coverage Status](https://coveralls.io/repos/n7v/blowfish/badge.svg?branch=master&service=github)](https://coveralls.io/github/n7v/blowfish?branch=master)
+[![Code Climate](https://codeclimate.com/github/n7v/blowfish/badges/gpa.svg)](https://codeclimate.com/github/n7v/blowfish)
+[![Dependency Status](https://gemnasium.com/n7v/blowfish.svg)](https://gemnasium.com/n7v/blowfish)
 
 Pure-ruby implementation of the Blowfish cipher.
 
