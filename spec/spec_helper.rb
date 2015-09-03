@@ -1,5 +1,13 @@
+require 'coveralls'
 require 'simplecov'
-SimpleCov.start
+
+if RUBY_ENGINE == 'ruby'
+  if Coveralls.should_run?
+    Coveralls.wear!
+  else
+    SimpleCov.start
+  end
+end
 
 require 'blowfish'
 
