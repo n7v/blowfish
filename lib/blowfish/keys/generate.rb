@@ -10,10 +10,10 @@ module Blowfish
         P:  Blowfish::Key::Init::P.dup
       )
 
-      pass = pass.ljust(key.P.size * 4, pass)
+      #pass = pass.ljust(key.P.size * 4, pass)
 
-      (0...(key.P.size)).step(4) do |i|
-        key.P[i] ^= pass.byteslice(i, 4).unpack('I>').first
+      (0...(key.P.size)).each do |i|
+        key.P[i] ^= pass.byteslice(i*4%pass.size, 4).unpack('I>').first
       end
 
       b = 0.chr * 8
